@@ -3,12 +3,10 @@ import { NgModule } from '@angular/core';
 import {FormsModule} from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { KeyboardComponent } from './calculator/keyboard/keyboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    KeyboardComponent
   ],
   imports: [
     BrowserModule,
