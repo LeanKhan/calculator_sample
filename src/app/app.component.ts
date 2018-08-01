@@ -13,9 +13,5 @@ constructor(){
 ngOnInit(){
 
 }
-  showArray(){
-    
-  }
-
   
 }
