@@ -1,3 +1,5 @@
 <div class="calc-input card">
-  <input id="input" name="calc-input" type="number">
+  <input id="input" name="calc-input" type="text" [(ngModel)] = "input"autofocus readonly>
+  <br>
+  <h4 id="result-screen">{{input}}</h4>
 </div>

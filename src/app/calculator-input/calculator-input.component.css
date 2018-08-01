@@ -2,7 +2,6 @@
 input {
     width: 100%;
     height: 60px;
-    background-color: #fafafa;
     border-radius: 4px 4px 0px 0px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 40px;
@@ -10,17 +9,26 @@ input {
     box-sizing: border-box;
     display: block;
     border: none;
-}
-input:focus {
+    background: none;
     outline: none;
-    -webkit-box-shadow: 0px 3px 31px 0px rgba(0,0,0,0.76); 
-    box-shadow: 0px 3px 31px 0px rgba(0,0,0,0.76);
 }
 /* Hide HTML5 Up and Down arrows. */
-input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button {
+input[type="text"]::-webkit-outer-spin-button, input[type="text"]::-webkit-inner-spin-button {
     -webkit-appearance: none;
 }
  
-input[type="number"] {
+input[type="text"] {
     -moz-appearance: textfield;
+}
+.calc-input {
+    background-color: #fafafa;
+    animation: box-shadow 0.5s;
+    width: 500px;
+}
+.calc-input:focus-within {
+    -webkit-box-shadow: 0px 3px 31px 0px rgba(0,0,0,0.76); 
+    box-shadow: 0px 3px 31px 0px rgba(0,0,0,0.76);
+}
+h4#result-screen {
+    padding-left: 20px;
 }

@@ -1,0 +1,34 @@
+table {
+    cursor: pointer;
+    text-align: center;
+    background-color:#181c1e;
+    color: #fafafa;
+    width: auto;
+    font-size: 30px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+table td {
+    /* border: 1px solid rgba(255,255,255,0.3); */
+    vertical-align: middle;
+    height: 60px;
+    width: 60px;
+    padding: 10px;
+}
+.calc-buttons {
+    /* border-bottom-left-radius: 5px; */
+    border-radius: 25px;
+    border: none;
+    width: 500px;
+    margin-top: 30px;
+}
+.special {
+    background-color: #5f4bb6;
+}
+.equal {
+    background-color: #fec208;
+    color: black;
+}
+table td:hover{
+    background-color: dimgrey;
+}
