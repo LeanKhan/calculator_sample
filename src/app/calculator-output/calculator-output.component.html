@@ -35,7 +35,7 @@
           <td class="equal">=</td>
         </tr> -->
     <tr *ngFor = "let row of buttons">
-    <td *ngFor = "let button of row" class="{{button.class}}">
+    <td *ngFor = "let button of row" class="{{button.class}}" (click) = "buttonAction(button)">
       {{button.value}}
     </td>
     </tr>

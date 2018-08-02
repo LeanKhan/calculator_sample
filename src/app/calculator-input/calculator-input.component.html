@@ -1,5 +1,5 @@
 <div class="calc-input card">
-  <input id="input" name="calc-input" type="text" [(ngModel)] = "input"autofocus readonly>
+  <input id="input" name="calc-input" type="text" [(ngModel)] = "day"autofocus readonly>
   <br>
-  <h4 id="result-screen">{{input}}</h4>
+  <h4 *ngIf = "outputResult" id="result-screen">{{say}}</h4>
 </div>

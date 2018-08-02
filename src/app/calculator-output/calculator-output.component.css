@@ -30,5 +30,5 @@ table td {
     color: black;
 }
 table td:hover{
-    background-color: dimgrey;
+  color: #ff3333;
 }

@@ -8,29 +8,33 @@ import {buttonsArray} from '../buttons-def';
 })
 export class CalculatorOutputComponent implements OnInit {
 
-  buttons = buttonsArray;
-inputString: string;
-table: any;
-setUpEventListener(): void{
-  this.table.addEventListener("click",function(event){
-        console.log(event);
-  })
-};
-consoleEvent(): void {
-  console.log(this.table)
+buttons = buttonsArray;
+inputString: string = "";
+inputResult: any = "";
+buttonAction(button){
+  if(localStorage.getItem("inputString")){
+    this.inputString = localStorage.getItem("inputString")
+  }
+  if(button.class == null){
+     this.inputString= this.inputString.concat(button.value);
+    console.log(button);
+  }else if(button.value == "del"){
+    this.inputString = this.inputString.slice(0,this.inputString.length-1);
+    this.inputResult = "";
+  } else if(button.value == "C"){
+    this.inputString = "";
+    this.inputResult = "";
+  } else if(button.value == "="){
+    this.inputResult = eval(this.inputString);
+  }
+  localStorage.setItem('inputString', this.inputString);
+  localStorage.setItem('inputResult', this.inputResult);
 }
-passValue(): void{
-  console.log("pressed!")
-}
-
   constructor() {
  
   }
 
   ngOnInit() {
-    this.table = document.getElementById("button-table");
-       // this.setUpEventListener()
-        this.consoleEvent() 
       
   }
 
