@@ -1,8 +1,8 @@
 <div class="card calc-buttons">
   <!-- Row of Buttons -->
  <table id="button-table">
-  <tr>
- <td id="/">/</td>
+  <!-- <tr>
+ <td id="/" (click)="passValue()">/</td>
  <td id="*">x</td>
  <td id="%">%</td>
  <td class="special" id="">del</td>
@@ -33,6 +33,11 @@
           <td id=".">.</td>
           <td id="0">0</td>
           <td class="equal">=</td>
-        </tr>
+        </tr> -->
+    <tr *ngFor = "let row of buttons">
+    <td *ngFor = "let button of row" class="{{button.class}}">
+      {{button.value}}
+    </td>
+    </tr>
  </table>
 </div>

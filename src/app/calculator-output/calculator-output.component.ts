@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {buttonsArray} from '../buttons-def';
 
 @Component({
   selector: 'app-calculator-output',
@@ -8,19 +8,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CalculatorOutputComponent implements OnInit {
 
+  buttons = buttonsArray;
 inputString: string;
-table: HTMLElement = document.getElementById("table-buttons");
-setUpEventListener(){
+table: any;
+setUpEventListener(): void{
   this.table.addEventListener("click",function(event){
-      if(event.target){
         console.log(event);
-      }
   })
+};
+consoleEvent(): void {
+  console.log(this.table)
 }
-  constructor() { 
+passValue(): void{
+  console.log("pressed!")
+}
+
+  constructor() {
+ 
   }
 
   ngOnInit() {
+    this.table = document.getElementById("button-table");
+       // this.setUpEventListener()
+        this.consoleEvent() 
+      
   }
 
 }
