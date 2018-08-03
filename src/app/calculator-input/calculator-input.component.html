@@ -1,5 +1,20 @@
 <div class="calc-input card">
-  <input id="input" name="calc-input" type="text" [(ngModel)] = "day"autofocus readonly>
+  <!-- 
+  Input field used to display 'inputString'.
+  'inputString' is stored in LocalStorage
+  ..................
+  Implementing [ngModel] binding to returnInputString() which
+  returns the value of 'inputString' stored in LocalStorage. 
+  -->
+  <input id="input" name="calc-input" type="text" [ngModel] = "returnInputString" readonly>
   <br>
-  <h4 *ngIf = "outputResult" id="result-screen">{{say}}</h4>
+  <!-- 
+    h4 element binds to returnInputResult() which returns the
+    value of 'inputResult' stored in LocalStorage.
+    
+   .................
+
+   Only shows if 'outputResult' has a value.
+   -->
+  <h4 *ngIf = "outputResult" id="result-screen">{{returnInputResult}}</h4>
 </div>

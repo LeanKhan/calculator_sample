@@ -1,7 +1,9 @@
+<!-- Template HTML for CalculatorOutputComponent used as view for buttons in the calculator -->
 <div class="card calc-buttons">
-  <!-- Row of Buttons -->
+  <!-- Table of Buttons-->
  <table id="button-table">
-    <tr *ngFor = "let row of buttons">
+    <tr *ngFor = "let row of buttons"> <!-- Render rows for each array item -->
+      <!-- Within each table row, create td element for each inner array item -->
     <td *ngFor = "let button of row" class="{{button.class}}" (click) = "buttonAction(button)">
       {{button.value}}
     </td>

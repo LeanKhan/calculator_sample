@@ -6,19 +6,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./calculator-input.component.css']
 })
 export class CalculatorInputComponent implements OnInit {
-inputText: any= document.getElementById("input");
+// inputText: any= document.getElementById("input");
 
 outputString: string = localStorage.getItem('inputString');
-outputResult: any = localStorage.getItem('inputResult');
+//Used to hold the value of 'inputResult' and 'inputString' for
+//validation purposes. Used in CalculatorInputComponent.html line 4 
+outputResult: string = localStorage.getItem('inputResult');
   constructor() { 
   }
 
   ngOnInit() {
   }
-   public get say():string{
+
+
+  //These functions continually check the values of 'inputResult' and 'inputString' in LocalStorage
+  // and returns the values to CalculatorInputComponent view.
+   public get returnInputResult():string{
      return localStorage.getItem('inputResult');
    }
-   public get day():string{
+   public get returnInputString():string{
      return localStorage.getItem('inputString');
    }
 }
