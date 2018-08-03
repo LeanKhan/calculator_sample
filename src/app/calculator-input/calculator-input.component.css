@@ -22,10 +22,9 @@ input[type="text"] {
 }
 .calc-input {
     background-color: #fafafa;
-    animation: box-shadow 0.5s;
-    width: 500px;
-}
-.calc-input:focus-within {
+    width: auto;
+    margin: auto;
+    color:#1e2325;
     -webkit-box-shadow: 0px 3px 31px 0px rgba(0,0,0,0.76); 
     box-shadow: 0px 3px 31px 0px rgba(0,0,0,0.76);
 }

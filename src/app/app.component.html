@@ -2,9 +2,17 @@
 <div class="main container">
     <div class="title">
         {{title}}
-      </div>
-      <div class="container calc">
-      <app-calculator-input></app-calculator-input>
-      <app-calculator-output></app-calculator-output>        
-      </div>
+    </div>
+<!-- Container for Calculator components -->
+<div class="container calc">
+<div class="row">
+<!-- Column with calculator components -->
+    <div class="offset-md-3 col-md-6">
+<!-- Calculator screen -->
+        <app-calculator-input></app-calculator-input>
+<!-- Calculator buttons -->
+        <app-calculator-output></app-calculator-output>      
+    </div>  
+</div>
+</div>
 </div>

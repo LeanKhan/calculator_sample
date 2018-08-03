@@ -5,8 +5,6 @@ table {
     color: #fafafa;
     width: auto;
     font-size: 30px;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
 }
 table td {
     /* border: 1px solid rgba(255,255,255,0.3); */
@@ -14,21 +12,27 @@ table td {
     height: 60px;
     width: 60px;
     padding: 10px;
+    /* transition: color 0.4; */
+    animation: -webkit-box-shadow box-shadow 0.9s;
 }
 .calc-buttons {
-    /* border-bottom-left-radius: 5px; */
-    border-radius: 25px;
     border: none;
-    width: 500px;
+    width: auto;
+    margin: auto;
     margin-top: 30px;
 }
-.special {
-    background-color: #5f4bb6;
-}
 .equal {
-    background-color: #fec208;
+    /* background-color: #fec208; */
+    background-color: #ff3333;
     color: black;
 }
 table td:hover{
   color: #ff3333;
+  -webkit-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.4); 
+    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.4);
+}
+.equal:hover {
+    /* background-color: #fec208; */
+    background-color: #ff3333;
+    color: #fafafa ! important;
 }
